@@ -3,13 +3,15 @@ import TradingViewEtfHeatmap from "./components/api/etf";
 import ETFViewWidget from "./components/api/etf";
 import StockViewWidget from "./components/api/stockheat";
 import TradingViewWidget from "./components/constanst/header/news";
+import NavBar from "./components/constanst/navbarr/navbar";
 
 
 function App() {
    return <section>
-      <TradingViewWidget></TradingViewWidget>
+       <NavBar></NavBar>
+      {/* <TradingViewWidget></TradingViewWidget>
       <CalendarWidget></CalendarWidget>
-      <TradingViewEtfHeatmap></TradingViewEtfHeatmap>
+      <TradingViewEtfHeatmap></TradingViewEtfHeatmap> */}
    </section>
 }
 
