@@ -2,9 +2,9 @@
 
 export default function NavBar() {
     return (
-      <section className="w-screen bg-navblue pl-4 pr-4">
+      <section className="w-screen bg-navblue pl-4 pr-4 h-2/4  ">
         {/* Top section with logo, text, and buttons */}
-        <div className="flex justify-between w-full h-full p-4 ">
+        <div className="flex justify-around w-full h-full p-4 ">
           <div className="flex flex-col items-center">
             {/* Logo and text */}
             <div className="text-2xl font-bold flex items-center w-full">
@@ -25,11 +25,11 @@ export default function NavBar() {
           {/* Action buttons */}
           <div className="flex gap-4 py-5">
             <div>
-              <input
+              {/* <input
                     type="search"
                     className="border-b-2 border-transparent focus:border-blue-500 focus:outline-none"
                     placeholder="Search"
-                    />
+                    /> */}
 
             </div>
             <div>
