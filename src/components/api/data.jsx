@@ -1,13 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const DateQuotesWidget = () => {
-  const widgetRef = useRef(null);
-
   useEffect(() => {
-    if (widgetRef.current) return; // Prevents multiple renderings
-    widgetRef.current = true;
+    // Check if the script is already in the DOM
+    const existingScript = document.getElementById("tradingview-market-quotes-script");
 
+    if (existingScript) return; // If the script already exists, exit early
+
+    // Create the script element for the TradingView Market Quotes widget
     const script = document.createElement("script");
+    script.id = "tradingview-market-quotes-script"; // Unique ID to avoid duplicates
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
     script.async = true;
     script.innerHTML = JSON.stringify({
@@ -69,23 +71,26 @@ const DateQuotesWidget = () => {
       backgroundColor: "#131722",
     });
 
+    // Append the script to the DOM
     document.getElementById("tradingview-market-quotes-widget").appendChild(script);
 
+    // Cleanup function (runs when the component unmounts)
     return () => {
-      widgetRef.current = null; // Reset when unmounted
+      // You can add more cleanup logic here if needed
+      // (e.g., removing the widget, clearing intervals, etc.)
     };
-  }, []);
+  }, []); // This effect only runs once when the component mounts
 
   return (
     <div className="tradingview-widget-container" style={{ width: "550px", height: "550px" }}>
       <div id="tradingview-market-quotes-widget"></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">
-          <span className="blue-text">Track all markets on TradingView</span>
+          <span className="blue-text"></span>
         </a>
       </div>
     </div>
   );
 };
 
-export default DateQuotesWidget ;
+export default DateQuotesWidget;

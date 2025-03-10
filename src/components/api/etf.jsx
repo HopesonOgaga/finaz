@@ -1,13 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const TradingViewEtfHeatmap = () => {
-  const widgetRef = useRef(null);
-
   useEffect(() => {
-    if (widgetRef.current) return; // Prevent multiple initializations
-    widgetRef.current = true; 
+    // Check if the script is already added to the DOM
+    const existingScript = document.getElementById("tradingview-etf-heatmap-script");
 
+    if (existingScript) return; // If the script already exists, return early to prevent duplicate loading
+
+    // Create the script element for the TradingView ETF Heatmap widget
     const script = document.createElement("script");
+    script.id = "tradingview-etf-heatmap-script"; // Add an ID to the script for easy detection
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-etf-heatmap.js";
     script.async = true;
     script.innerHTML = JSON.stringify({
@@ -27,19 +29,21 @@ const TradingViewEtfHeatmap = () => {
       height: "100%",
     });
 
+    // Append the script to the DOM
     document.getElementById("tradingview-etf-heatmap").appendChild(script);
 
+    // Cleanup function to reset if the component is unmounted
     return () => {
-      widgetRef.current = null; // Reset on unmount
+      // You can add any cleanup logic if necessary, but the script won't be added again due to the check.
     };
-  }, []);
+  }, []); // The empty array ensures this effect only runs once when the component is mounted
 
   return (
     <div className="tradingview-widget-container" style={{ width: "100%", height: "100%" }}>
       <div id="tradingview-etf-heatmap"></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">
-          <span className="blue-text">Track all markets on TradingView</span>
+          <span className="blue-text"></span>
         </a>
       </div>
     </div>

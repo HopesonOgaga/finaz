@@ -1,18 +1,9 @@
-import CalendarWidget from "./components/api/calendar";
-import TradingViewEtfHeatmap from "./components/api/etf";
-import ETFViewWidget from "./components/api/etf";
-import StockViewWidget from "./components/api/stockheat";
-import TradingViewWidget from "./components/constanst/header/news";
-import NavBar from "./components/constanst/navbarr/navbar";
-
+import Home from "./components/constanst/home";
 
 function App() {
-   return <section>
-       <NavBar></NavBar>
-      {/* <TradingViewWidget></TradingViewWidget>
-      <CalendarWidget></CalendarWidget>
-      <TradingViewEtfHeatmap></TradingViewEtfHeatmap> */}
-   </section>
+  return <section>
+   <Home></Home>
+  </section>;
 }
 
 export default App;
