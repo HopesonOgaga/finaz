@@ -16,7 +16,7 @@ const TradingViewScreener = () => {
       defaultScreen: "general",
       market: "forex",
       showToolbar: true,
-      colorTheme: "dark",
+      colorTheme: "light",
       locale: "en",
     });
 

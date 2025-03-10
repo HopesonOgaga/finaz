@@ -16,7 +16,7 @@ const TradingViewAdvancedChart = () => {
       symbol: "NASDAQ:AAPL",
       interval: "D",
       timezone: "Etc/UTC",
-      theme: "dark",
+      theme: "light",
       style: "1",
       locale: "en",
       allow_symbol_change: true,

@@ -100,7 +100,7 @@ const StockFooter = () => {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-yellow-400"
+              className="hover:text-blue-400"
             >
               {site.name}
             </a>

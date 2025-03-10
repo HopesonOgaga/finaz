@@ -6,6 +6,9 @@ import TradingViewHotlistsWidget from "../../api/hotlist";
 import DateQuotesWidget from "../../api/data";
 import TradingViewEtfHeatmap from "../../api/etf";
 import StockFooter from "../links/lndex";
+import RealTimeChart from "../../api/charts/realtime";
+import Inside from "../footer/info";
+import Footer from "../footer";
 export default function Home() {
   return (
     <section>
@@ -17,7 +20,6 @@ export default function Home() {
         <div className="flex gap-3 flex-col">
           <NewsTradingViewWidget></NewsTradingViewWidget>
           <TradingViewScreener></TradingViewScreener>
-
           <DateQuotesWidget></DateQuotesWidget>
         </div>
         <div className="flex flex-col gap-4 ">
@@ -26,7 +28,14 @@ export default function Home() {
           <TradingViewEtfHeatmap></TradingViewEtfHeatmap>
         </div>
       </section>
-      <div><StockFooter></StockFooter></div>
+      <section>
+        <RealTimeChart></RealTimeChart>
+      </section>
+      <div>
+        <StockFooter></StockFooter>
+        <Footer></Footer>
+        <Inside></Inside>
+      </div>
     </section>
   );
 }

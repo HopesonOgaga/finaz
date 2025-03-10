@@ -1,74 +1,94 @@
 // src/NavBar.js
 
 export default function NavBar() {
-    return (
-      <section className="w-screen bg-navblue pl-4 pr-4 h-2/4  ">
-        {/* Top section with logo, text, and buttons */}
-        <div className="flex justify-around w-full h-full p-4 ">
-          <div className="flex flex-col items-center">
-            {/* Logo and text */}
-            <div className="text-2xl font-bold flex items-center w-full">
-                <p className="text-white font-bold flex items-center">
-                    finanzez
-                    <span className="w-3 h-3 mt-4 bg-red-500 rounded-full shadow-md mx-1"></span>
-                    net
-                </p>
-                </div>
-
-            {/* Optional image (currently empty) */}
-            <div className="text-white font-semibold underline">
-              <p>Depot Eröffnen</p>
-            </div>
-
+  return (
+    <section className="w-full bg-navblue px-4 py-8">
+      {/* Top section with logo, text, and buttons */}
+      <div className="flex flex-col sm:flex-row justify-around items-center w-full py-6">
+        <div className="flex flex-col items-center sm:items-start">
+          {/* Logo and text */}
+          <div className="text-2xl font-bold flex items-center">
+            <p className="text-white font-bold flex items-center">
+              finanzez
+              <span className="w-3 h-3 mt-1 bg-red-500 rounded-full shadow-md mx-1"></span>
+              net
+            </p>
           </div>
-  
-          {/* Action buttons */}
-          <div className="flex gap-4 py-5">
-            <div>
-              {/* <input
-                    type="search"
-                    className="border-b-2 border-transparent focus:border-blue-500 focus:outline-none"
-                    placeholder="Search"
-                    /> */}
 
-            </div>
-            <div>
-              <button className="btn bg-white border-red-300   text-red-500 font-medium capitalize rounded-lg shadow-md w-36 h-10">1 Share Free</button>
-            </div>
-            <div>
-              <button className="btn bg-navgold text-white font-medium capitalize rounded-lg shadow-md w-36 h-10">Buy Crypto</button>
-            </div>
-            <div className="">
-              <button className="btn bg-navgreen text-white font-medium capitalize rounded-lg shadow-md w-36 h-10">ETF Savings Plan</button>
-            </div>
-            <div>
-              <button className="btn  bg-white text-blue-600 font-medium capitalize rounded-lg shadow-md w-36 h-10 ">
-                Register <img src="register-icon.png" alt="register" className="inline-block w-4 h-4" />
-              </button>
-            </div>
+          {/* Optional image (currently empty) */}
+          <div className="text-white font-semibold underline mt-2">
+            <p>Depot Eröffnen</p>
           </div>
         </div>
-  
-        {/* Main Navigation Links */}
-        <div className="">
-          <nav className="flex w-full justify-center gap-6 p-4 ">
-            <ul className="flex gap-6 text-white ">
-              <li className="font-medium text-lg  capitalize"><a href="#shares">Shares</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#news">News</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#indices">Indices</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#funds">Funds</a></li>
-              <li className=" uppercase text-lg font-medium"><a href="#etfs">ETFs</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#certificates">Certificates</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#leverage-products">Leverage Products</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#bonds">Bonds</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#raw-materials">Raw Materials</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#crypto">Crypto</a></li>
-              <li className="font-medium text-lg  capitalize"><a href="#currency">Currency</a></li>
-              <li className="font-medium text-lg capitalize"><a href="#counselor">Counselor</a></li>
-            </ul>
-          </nav>
+
+        {/* Action buttons */}
+        <div className="flex gap-4 py-4">
+          <div>
+            <button className="btn bg-white border-red-300 text-red-500 font-medium capitalize rounded-lg shadow-md w-36 h-10 hover:bg-red-100 transition-colors ease-in-out">
+              1 Share Free
+            </button>
+          </div>
+          <div>
+            <button className="btn bg-navgold text-white font-medium capitalize rounded-lg shadow-md w-36 h-10 hover:bg-yellow-600 transition-colors ease-in-out">
+              Buy Crypto
+            </button>
+          </div>
+          <div>
+            <button className="btn bg-navgreen text-white font-medium capitalize rounded-lg shadow-md w-36 h-10 hover:bg-green-600 transition-colors ease-in-out">
+              ETF Savings Plan
+            </button>
+          </div>
+          <div>
+            <button className="btn bg-white text-blue-600 font-medium capitalize rounded-lg shadow-md w-36 h-10 hover:bg-blue-50 transition-colors ease-in-out">
+              Register <img src="register-icon.png" alt="register" className="inline-block w-4 h-4 ml-2" />
+            </button>
+          </div>
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+
+      {/* Main Navigation Links */}
+      <div className="w-full">
+        <nav className="flex justify-center gap-6 py-4">
+          <ul className="flex gap-6 text-white text-lg font-medium">
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#shares" aria-label="Go to Shares section">Shares</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#news" aria-label="Go to News section">News</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#indices" aria-label="Go to Indices section">Indices</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#funds" aria-label="Go to Funds section">Funds</a>
+            </li>
+            <li className="uppercase hover:text-gray-300 transition-colors">
+              <a href="#etfs" aria-label="Go to ETFs section">ETFs</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#certificates" aria-label="Go to Certificates section">Certificates</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#leverage-products" aria-label="Go to Leverage Products section">Leverage Products</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#bonds" aria-label="Go to Bonds section">Bonds</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#raw-materials" aria-label="Go to Raw Materials section">Raw Materials</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#crypto" aria-label="Go to Crypto section">Crypto</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#currency" aria-label="Go to Currency section">Currency</a>
+            </li>
+            <li className="capitalize hover:text-gray-300 transition-colors">
+              <a href="#counselor" aria-label="Go to Counselor section">Counselor</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  );
+}
