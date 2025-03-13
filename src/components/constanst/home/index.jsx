@@ -9,6 +9,9 @@ import StockFooter from "../links/lndex";
 import RealTimeChart from "../../api/charts/realtime";
 import Inside from "../footer/info";
 import Footer from "../footer";
+import LinksFooter from "../footer/links";
+import Card from "../footer/card";
+
 export default function Home() {
   return (
     <section>
@@ -31,8 +34,10 @@ export default function Home() {
       <section>
         <RealTimeChart></RealTimeChart>
       </section>
+      <section><Card></Card></section>
       <div>
         <StockFooter></StockFooter>
+        <LinksFooter></LinksFooter>
         <Footer></Footer>
         <Inside></Inside>
       </div>

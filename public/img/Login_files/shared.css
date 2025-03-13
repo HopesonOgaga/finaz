@@ -1,0 +1,38 @@
+﻿
+.imageLogoBoerseStuttgart2 {
+	display: inline-block;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAcCAYAAAA9UNxEAAACyklEQVR42uWYXU5jMQyF7wZmD7MEyisr4IU1INqnWcrshq2wkHkdUZAGHZVvfHqStIBoEGok6+Y6ie0T2/lbzrJsVtuHzeX2H7Rebf9sLh9/X13d/KDP7cXfn/D1v1493Wuc+Mt3KzIcoCKACxR97lbP18WrMd8asEA5OJH+3ctJI5m76Kh627fapk9aDzAed8MUzhn2tMvz4ounNsnUmB2/xqBDINXWyJtRAKyvSMqZgASkNu+DkWm8/tcX21/I1X8BLp3iM0n615jl1CUXLTdcnpCR/o+H6Ie3Mu8FBJ5kEObIY9ET+eQspy5SMvIonqI+Gqc26rmyZ0gzEaNJXk5deoAdpHvEcxow5eGS4f18QvRN2UnLqcsOcOUaxpFTBa5ybjemvN4DrLr6SYbIw9jXALwu3lzARoAZhacbPwIMSCh3gpQ37SDTC6tS3PYVEH1zj2Zc8vGw6r1wV9sUz551qTx6uidvm5PTu0uN+wxZKp9iA/lX1O65H8kvVucM8Sl7bU9fHiPJNXXA0PdfFNrLRm5lU/bakb7xCafafQsh3PWl7osTCxeHC7YleDm5mVJsUykfndjg+miD7zJ8exX9PyKmcRhSYIt8i/KwRwbedUJ50mj7cvkC1LuzE0Hqk9fb0WluuF+Kl/ulz+ghwOlhjcEjfsQUMS4PIfCQleP84NNzmvr09O0lNyeoPCTsgXsthwCPctg9sR/KNa63blBvU6AFLGcc0FcN+vbutm8BjAEfASwQbwUsmWPALbDgl0Iu31zVRoBLYctT3x5gHgJ6V8rk+WJ07Oqp+jHA0hv6ytDRPozw5LevH5VD7dm7fQtzAw9dF/0+ngvTMcADfXVAQBjXtnze4UWElZMx4rX7d8kVn2jBY8jKvujupYz6pz4is3RXSX0zDzxHDwi5IE17DPiK4s/EHoLTHvVmF8KOMBboKY9551BeABeFKMXDKYIqAAAAAElFTkSuQmCC);
+	width: 60px;
+	height: 28px;
+}
+
+.not-assigned-blur {
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.not-assigned-overlay {
+	position: absolute;
+	z-index: 10;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 12.5%;
+}
+
+@media (max-width : 767px) {
+	.not-assigned-overlay {
+		position: absolute;
+		z-index: 10;
+		width: 87%;
+		margin-left: 0%;
+		margin-top: 15%;
+	}
+}

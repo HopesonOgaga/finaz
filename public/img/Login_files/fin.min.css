@@ -1,0 +1,1 @@
+.performance-bar--time:after{left:max(calc(var(--sg-performance-bar-curr-value-pos,0%) - var(--sg-performance-bar-marker-width)),0%)!important}.page-content__item.page-content__item-grid{display:grid;grid-gap:var(--sg-page-content-item-gap,0.5rem);grid-template-rows:max-content}

@@ -1,0 +1,46 @@
+var userHintHandler = function (hintElement) {
+  this.userHintStorageValue = 'true';
+
+  this.initValues = function (hintElement) {
+    const that = this;
+    const userHintElement = hintElement;
+    const userHintKey = userHintElement.getAttribute('data-user-hint-key');
+    if (!userHintKey) throw new Error('User hint key is not defined');
+    const storageKey = `${userHintKey}-hint-closed`;
+    const closeIcon = userHintElement.querySelector('[data-user-hint-button]');
+    if (!closeIcon) throw new Error('User hint close icon is not defined');
+
+    if (!this.isHintClosed(storageKey)) {
+      this.showHint(userHintElement);
+    }
+
+    closeIcon.addEventListener('click', function () {
+      that.closeHint(userHintElement, storageKey);
+    });
+  }
+
+  this.isHintClosed = function (userHintStorageKey) {
+    return localStorage.getItem(userHintStorageKey) === this.userHintStorageValue;
+  }
+
+  this.closeHint = function (userHintElement, userHintStorageKey) {
+    localStorage.setItem(userHintStorageKey, this.userHintStorageValue);
+    userHintElement.classList.add('display-none');
+  }
+
+  this.showHint = function (userHintElement) {
+    userHintElement.classList.remove('display-none');
+  }
+
+  if (hintElement) {
+    this.initValues(hintElement);
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const userHints = document.querySelectorAll('[data-user-hint]');
+  userHints.forEach(function (hintElement) {
+    userHintHandler(hintElement);
+  });
+});

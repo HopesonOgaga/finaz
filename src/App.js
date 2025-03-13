@@ -1,8 +1,8 @@
-import Home from "./components/constanst/home";
+import Login from "./components/form/login/login";
 
 function App() {
-  return <section>
-   <Home></Home>
+  return <section className="">
+   <Login></Login>
   </section>;
 }
 

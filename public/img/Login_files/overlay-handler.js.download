@@ -1,0 +1,53 @@
+window.overlay = {
+    show: function () {
+        var overlay = document.getElementById("overlay-subscriptionupgrade");
+        if (overlay) {
+            overlay.classList.remove("display-none");
+        }
+    },
+    close: function () {
+        var overlay = document.getElementById("overlay-subscriptionupgrade");
+        if (overlay) {
+            overlay.classList.add("display-none");
+
+            var checkbox = document.getElementById("overlay-checkbox-icon");
+            if (checkbox && checkbox.checked) {
+                sessionStorage.setItem("overlay-closed-subscriptionupgrade", "true");
+            }
+        }
+    }
+};
+
+function closeOverlay() {
+    window.overlay.close();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var wasClosedInSession = sessionStorage.getItem("overlay-closed-subscriptionupgrade");
+
+    if (!wasClosedInSession) {
+        window.overlay.show();
+    } else {
+        var overlay = document.getElementById("overlay-subscriptionupgrade");
+        if (overlay) {
+            overlay.classList.add("display-none");
+        }
+    }
+
+    var closeIcon = document.getElementById("overlay-close-icon-subscriptionupgrade");
+    if (closeIcon) {
+        closeIcon.onclick = function () {
+            closeOverlay();
+        };
+    }
+
+    var checkbox = document.getElementById("overlay-checkbox-icon");
+    if (checkbox) {
+        checkbox.onchange = function () {
+            if (checkbox.checked) {
+                closeOverlay();
+                sessionStorage.setItem("overlay-closed-subscriptionupgrade", "true");
+            }
+        };
+    }
+});

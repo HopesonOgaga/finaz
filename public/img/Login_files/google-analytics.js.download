@@ -1,0 +1,101 @@
+const ga4Id = 'G-J4WKRJQPHJ';
+const ga4IdWithoutApps = 'G-NHYZMZLPTK';
+const gaIdcommercly = 'AW-10967047558';
+
+function getGcmStatus() {
+    let consentData = getEndUsersConsentData();
+    return consentData && consentData.gcmStatus
+        ? consentData.gcmStatus
+        : {};
+}
+
+function checkAnalyticsStorageConsent() {
+    const gcmStatus = getGcmStatus();
+    return gcmStatus
+        ? gcmStatus.analytics_storage === 'granted'
+        : false;
+}
+
+function getEndUsersConsentData() {
+    const propertyId = 7662;
+    const localStorageKey = `_sp_user_consent_${propertyId}`;
+
+    let endUsersConsent = localStorage.getItem(localStorageKey);
+
+    return endUsersConsent
+        ? JSON.parse(endUsersConsent)
+        : null;
+}
+
+function checkIABPurposeStoreAndAccessInformationOnADevice() {
+    let consentData = getEndUsersConsentData();
+
+    if (consentData && consentData.customVendorsResponse && Array.isArray(consentData.customVendorsResponse.consentedPurposes)) {
+        let consentedPurposes = consentData.customVendorsResponse.consentedPurposes;
+
+        let hasPurposeConsent = consentedPurposes.some(function (purpose) {
+            return purpose._id === '5e8342801e6abb1d1771084e'; //ID IAB Purpose Store and/or access information on a device (AT Property Sourcepoint )
+        });
+        return hasPurposeConsent;
+    } else {
+        return false;
+    }
+}
+
+window.getGaConsent = function () {
+    return checkIABPurposeStoreAndAccessInformationOnADevice() && checkAnalyticsStorageConsent();
+}
+
+function track() {
+    gtag('js', new Date());
+
+    gtag('config', ga4Id, { 'send_page_view': true });
+    gtag('config', ga4IdWithoutApps, { 'send_page_view': true });
+
+    //commerc.ly CB-428
+    gtag('config', gaIdcommercly, { 'send_page_view': true });
+}
+
+function loadGaScript() {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-J4WKRJQPHJ";
+    gaScript.onload = track;
+    document.head.appendChild(gaScript);
+}
+
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+
+gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted',
+    'wait_for_update': 500
+});
+
+gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'region': ['GB', 'BE', 'BG', 'CZ', 'DK', 'CY', 'LV', 'LT', 'LU', 'ES', 'FR', 'HR', 'IT', 'PL', 'PT', 'RO', 'SI', 'HU', 'MT', 'NL', 'AT', 'IS', 'LI', 'NO', 'SK', 'FI', 'SE', 'DE', 'EE', 'IE', 'EL'],
+    'wait_for_update': 500
+});
+
+window.trackGaEvent = function (eventName) {
+    try {
+        if (!Array.isArray(window.dataLayer)) {
+            throw new Error('data layer var not defined.');
+        }
+
+        gtag('js', new Date());
+        gtag('event', eventName, { 'send_to': ga4Id });
+
+    } catch (error) {
+        console.error('Error tracking GA event ' + eventName, error);
+    }
+}
+
+loadGaScript();
