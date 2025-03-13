@@ -21,7 +21,7 @@ export default function NavBar() {
 
           {/* Optional image (currently empty) */}
           <div className="text-white font-semibold underline mt-2">
-            <p>Depot Eröffnen</p>
+            <p className="underline ">Depot Eröffnen</p>
           </div>
         </div>
 
