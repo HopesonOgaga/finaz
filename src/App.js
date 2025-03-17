@@ -1,10 +1,11 @@
-import Login from "./components/form/login/login";
-import Register from "./components/form/register/register";
+import DashNav from "./components/dashboard/dashnav";
 
 function App() {
-  return <section className="">
-   <Register></Register>
-  </section>;
+  return (
+    <section className="">
+      <DashNav></DashNav>
+    </section>
+  );
 }
 
 export default App;
