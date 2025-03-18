@@ -41,7 +41,7 @@ export default function DashNav() {
 
         {/* Button */}
         <div>
-          <button className="text-lg capitalize font-normal text-navblue border-solid border-2  border-navblue h-10 w-24 rounded-full hover:to-blue-400">
+          <button className="hidden text-lg capitalize font-normal text-navblue border-solid border-2  border-navblue h-10 w-24 rounded-full hover:to-blue-400">
             In Total
           </button>
         </div>
