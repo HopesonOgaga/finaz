@@ -120,7 +120,7 @@ export default function NavBar() {
                       <p>forum</p>
                     </li>
                   </Link>
-                  <Link to="#">
+                  <Link to="https://www.tradingdesk.de/">
                     <li className="capitalize hover:underline hover:text-blue-500">
                       <img src="" alt="" />
                       <p>trading desk</p>
@@ -138,7 +138,7 @@ export default function NavBar() {
                       <p>social media</p>
                     </li>
                   </Link>
-                  <Link to="#">
+                  <Link to="https://www.thestockpodcast.com/episodes/">
                     <li className="capitalize hover:underline hover:text-blue-500">
                       <img src="" alt="" />
                       <p>podcast</p>
