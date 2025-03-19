@@ -5,7 +5,7 @@ import ProfileCrds from "../securities/cards";
 import ServicesOption from "../securities/futherservices";
 import Security from "../securities/overview";
 
-export default function Profile() {
+export default function Overview() {
   return <section className="">
     <DashNav></DashNav>
     <Security></Security>

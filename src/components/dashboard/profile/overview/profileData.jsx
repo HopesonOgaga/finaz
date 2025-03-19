@@ -2,7 +2,7 @@ import Footer from "../../../constanst/footer";
 import LinksFooter from "../../../constanst/footer/links";
 import DashNav from "../../dashnav";
 
-export default function PersonalData() {
+export default function ProfileData() {
     return (
      <>
      <DashNav></DashNav>

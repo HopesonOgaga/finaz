@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../../constanst/footer";
 import Inside from "../../constanst/footer/info";
 import LinksFooter from "../../constanst/footer/links";
@@ -46,9 +47,12 @@ export default function Login() {
                   <div className="flex flex-col gap-4 mt-6">
                     {/* Register Button */}
                     <div className="mt-6">
-                      <button className="bg-navgreen text-white font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-green-300 hover:scale-110 transition">
-                        Register
-                      </button>
+                      <Link to={'/register'} className="w-full h-full">
+                        {" "}
+                        <button className="bg-navgreen text-white font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-green-300 hover:scale-110 transition">
+                          Register
+                        </button>
+                      </Link>
                     </div>
                     {/* Google Button */}
                     <div>
@@ -83,9 +87,12 @@ export default function Login() {
                     </a>
                   </p>
                   <div className="mt-4">
-                    <button className="border-navgreen text-navgreen font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-navblue active:text-white hover:text-white hover:scale-110 transition">
-                      Create a free account now
-                    </button>
+                    <Link to={"/register"} className="w-full h-full">
+                      {" "}
+                      <button className="border-navgreen text-navgreen font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-navblue active:text-white hover:text-white hover:scale-110 transition">
+                        Create a free account now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
