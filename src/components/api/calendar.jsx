@@ -24,7 +24,7 @@ const CalendarWidget = () => {
   }, []); // Empty dependency array ensures this runs only once
 
   return (
-    <div className="tradingview-widget-container">
+    <div className="tradingview-widget-container w-full h-full">
       <div id="tradingview-events-widget"></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">

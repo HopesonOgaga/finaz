@@ -13,8 +13,8 @@ const DateQuotesWidget = () => {
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
     script.async = true;
     script.innerHTML = JSON.stringify({
-      width: 550,
-      height: 550,
+      width: '100%',
+      height: 550, // Fixed height for desktop
       symbolsGroups: [
         {
           name: "Indices",
@@ -82,8 +82,12 @@ const DateQuotesWidget = () => {
   }, []); // This effect only runs once when the component mounts
 
   return (
-    <div className="tradingview-widget-container" style={{ width: "550px", height: "550px" }}>
-      <div id="tradingview-market-quotes-widget"></div>
+    <div className="tradingview-widget-container w-full max-w-full" style={{ width: "100%" }}>
+      <div
+        id="tradingview-market-quotes-widget"
+        className="w-full sm:h-72 md:h-96 lg:h-550" // Responsive height based on screen size
+        style={{ height: "550px" }} // Default height (500px for desktop)
+      ></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">
           <span className="blue-text"></span>

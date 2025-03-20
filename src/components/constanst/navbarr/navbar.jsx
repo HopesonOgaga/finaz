@@ -16,14 +16,10 @@ export default function NavBar() {
   };
 
   return (
-    <section className="w-full h-full bg-navblue px-6 py-6">
-      {/* Top section with logo, text, and buttons */}
-      <div className="w-full h-full pl-0 pr-0">
-        {/* <TradingTicket></TradingTicket> */}
-      </div>
+    <section className="w-full h-full bg-navblue px-6 py-6 p-0">
 
-      <div className="flex flex-col sm:flex-row justify-between items-center w-full py-4">
-        <div className="flex flex-col items-center sm:items-start">
+      <div className="flex">
+        <div className="flex flex-col items-center md:items-start w-full h-full ">
           {/* Logo and text */}
           <div className="text-2xl font-bold flex items-center">
             <Link to={'/'} className="w-full h-full">
@@ -103,12 +99,13 @@ export default function NavBar() {
             )}
           </div>
         </div>
+        <div><p>put hamburer here</p></div>
       </div>
 
       {/* Main Navigation Links - responsive */}
       <div className="w-full">
         <nav className="flex flex-col sm:flex-row justify-center gap-6 py-4">
-          <ul className="flex flex-col sm:flex-row gap-6 text-white text-lg font-medium">
+          <ul className="flex hidden md:block md:flex  gap-6 text-white text-lg font-medium">
             {/* Shares with dropdown */}
             <li
               className="relative capitalize hover:text-gray-300 transition-colors"
@@ -151,6 +148,7 @@ export default function NavBar() {
           </ul>
         </nav>
       </div>
+    
     </section>
   );
 }
