@@ -13,7 +13,7 @@ const dashLinks = [
 export default function DashNav() {
   return (
     <section>
-      <div className="border-solid rounded-sm shadow-md w-full h-full mt-4 flex gap-8 flex-col p-4">
+      <div className="border-solid rounded-sm shadow-md w-full h-full mt-4 flex gap-8 flex-col p-4 hidden md:block md:flex md:flex-row">
         <div>
           <p className="text-navblue font-semibold capitalize text-3xl">
             My Finances - <span>username</span>

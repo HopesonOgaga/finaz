@@ -10,7 +10,7 @@ export default function Login() {
       <NavBar></NavBar>
       <section className="w-screen h-full">
         {/* Card Box */}
-        <div className="flex justify-center items-center w-full h-screen px-4 md:px-0">
+        <div className="flex justify-center items-center w-full h-full px-4 md:px-0">
           <div className="w-full max-w-5xl bg-white p-8 rounded-lg shadow-lg">
             <div className="w-full h-full justify-start mb-4 flex gap-4 flex-col">
               <p className="text-navblue font-medium text-3xl text-center md:text-left">

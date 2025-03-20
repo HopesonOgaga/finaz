@@ -317,8 +317,6 @@ export default function NavBar() {
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
               <a href="#advisor" aria-label="Go to Advisor section">Counselor</a>
-
-
             </li>
           </ul>
         </nav>

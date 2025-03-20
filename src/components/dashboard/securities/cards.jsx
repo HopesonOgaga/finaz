@@ -2,13 +2,13 @@ import React from 'react';
 
 function ModelPortfolioCard() {
   return (
-    <div className="w-3/5 border-2 border-solid rounded-md shadow-md p-4 flex gap-6  flex-col">
+    <div className="md:w-3/5 w-full h-full border-2 border-solid rounded-md shadow-md p-4 flex gap-6  flex-col">
       <p className="text-navblue font-medium text-xl capitalize">Model portfolios</p>
       <div className="flex justify-between w-full h-full">
-        <p className="text-lg capitalize font-medium">name</p>
-        <p className="text-lg capitalize font-medium">current value</p>
-        <p className="text-lg capitalize font-medium">perfect today</p>
-        <p className="text-lg capitalize font-medium">total performance</p>
+        <p className="md:text-lg text-sm capitalize md:font-medium font-normal ">name</p>
+        <p className="md:text-lg text-sm capitalize md:font-medium font-normal">current value</p>
+        <p className="md:text-lg text-sm capitalize md:font-medium font-normal">perfect today</p>
+        <p className="md:text-lg text-sm capitalize md:font-medium font-normal">total performance</p>
       </div>
       <div className="w-full underline border border-solid"></div>
       <div>

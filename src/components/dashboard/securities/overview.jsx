@@ -1,9 +1,9 @@
 export default function Security() {
   return (
-    <section className=" w-full h-full flex justify-between p-6 ">
+    <section className=" w-full h-full flex justify-between flex-col p-6 ">
       <div className="flex flex-col gap-2 ">
-        <p className="capitalize font-semibold text-lg ">finanzen.net securities accounts</p>
-        <p className="text-sm max-w-2xl">
+        <p className="capitalize font-semibold text-lg text-left ">finanzen.net securities accounts</p>
+        <p className="text-sm md:max-w-2xl w-full  text-left">
           You can also view your finanzen.net portfolios under "My Securities
           Portfolios." Simply click here . Help with integrating ZERO can be
           found here .
