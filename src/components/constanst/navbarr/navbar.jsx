@@ -6,6 +6,7 @@ export default function NavBar() {
   const [isSharesDropdownOpen, setIsSharesDropdownOpen] = useState(false);
   const [isShareProfileOpen, setProfileOpen] = useState(false);
   const [ismenu, setMenuOpen] = useState(false);
+  const [isProfile, setProfile] = useState(false)
 
   // Function to toggle dropdown visibility
   const toggleSharesDropdown = () => {
@@ -20,65 +21,125 @@ export default function NavBar() {
     setMenuOpen(!ismenu);
   };
 
+  const toggleInsideProfile =()=>{
+       setProfile(!isProfile)
+  }
+
   return (
     <section className="max-w-full h-[20vh] md:h-full bg-navblue p-4 md:px-6 md:py-6 ">
       <div className="flex w-full h-full">
         <div className="flex flex-col items-start md:items-start w-full h-full">
           {/* Logo and text */}
           <div className="text-2xl font-bold flex items-center gap-3">
-            <div onClick={toggleMenu}>
-              <img
+            <div >
+              <img onClick={toggleMenu}
                 className="md:hidden block w-10 h-8 rounded-sm shadow-md bg-white cursor-pointer"
                 src="/img/icons/menu.png"
                 alt="Menu"
               />
               {ismenu && (
-                <div className="w-screen  h-[120vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
+                <div className="w-screen  h-[150vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
                   <ul className="w-full h-full p-2 flex flex-col gap-4">
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       open a depot
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       etf Savings plan
                     </li>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
+                    <div className=" border-gray-400 border w-full "></div>
+                    <li onClick={toggleInsideProfile} className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       profile
+                      {isProfile && <ul className="w-full h-full flex flex-col gap-4    p-4">
+                      <Link to="/overview">
+                        <li className="capitalize hover:underline hover:text-blue-500">overview</li>
+                      </Link>
+                      <Link to="/profileData">
+                        <li className="capitalize hover:underline hover:text-blue-500">securities</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">model portfolios</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">watchlist</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">my news</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">newsletter</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">forum</li>
+                      </Link>
+                      <Link to="https://www.tradingdesk.de/">
+                        <li className="capitalize hover:underline hover:text-blue-500">trading desk</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">apps</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">social media</li>
+                      </Link>
+                      <Link to="https://www.thestockpodcast.com/episodes/">
+                        <li className="capitalize hover:underline hover:text-blue-500">podcast</li>
+                      </Link>
+                      <div className="text-white font-semibold underline mt-2 border-b-4 border-navblue"></div>
+                      <Link to="/login">
+                        <li className="capitalize hover:underline hover:text-blue-500">profile</li>
+                      </Link>
+                      <Link to="#">
+                        <li className="capitalize hover:underline hover:text-blue-500">logout</li>
+                      </Link>
+                    </ul>}
                     </li>
+                  
                     <div className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue "></div>
                    <div className="underline border-navblue border-2 border"></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       shares
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       news
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       indices
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       funds
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       etfs
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       Certificates
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       leverage products
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       raw materials
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       bonds
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       Crypto
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       currency
                     </li>
+                    <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       counsellor
                     </li>
