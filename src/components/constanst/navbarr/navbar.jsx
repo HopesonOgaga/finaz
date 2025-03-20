@@ -19,7 +19,7 @@ export default function NavBar() {
     <section className="w-full h-full bg-navblue px-6 py-6 p-0">
 
       <div className="flex">
-        <div className="flex flex-col items-center md:items-start w-full h-full ">
+        <div className="flex flex-col items-start md:items-start w-full h-full ">
           {/* Logo and text */}
           <div className="text-2xl font-bold flex items-center">
             <Link to={'/'} className="w-full h-full">
@@ -99,7 +99,7 @@ export default function NavBar() {
             )}
           </div>
         </div>
-        <div><p>put hamburer here</p></div>
+        <div><img className="md:hidden block w-8 h-8" src="/img/icons/menu.png" alt=""></img></div>
       </div>
 
       {/* Main Navigation Links - responsive */}
