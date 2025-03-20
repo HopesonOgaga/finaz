@@ -33,53 +33,53 @@ export default function NavBar() {
                 alt="Menu"
               />
               {ismenu && (
-                <div className="w-screen h-full bg-white rounded-sm shadow-sm z-50 absolute">
+                <div className="w-screen max-h-full bg-white rounded-sm shadow-sm z-50 absolute ">
                   <ul className="w-full h-full p-2 flex flex-col gap-4">
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       open a depot
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       etf Savings plan
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       profile
                     </li>
-                    <div className="underline border-2 bg-navblue border-blue-400 w-full"></div>
-                    {/* Add other menu items here */}
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <div className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue "></div>
+                   <div className="underline border-navblue border-2 border"></div>
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       shares
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       news
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       indices
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       funds
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       etfs
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       Certificates
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       leverage products
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       raw materials
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       bonds
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       Crypto
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       currency
                     </li>
-                    <li className="text-sm capitalize hover:text-blue-400 hover:underline font-normal">
+                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
                       counsellor
                     </li>
                   </ul>
