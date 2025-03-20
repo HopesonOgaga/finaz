@@ -19,7 +19,7 @@ export default function Home() {
       <div>
         <NavBar></NavBar>
       </div>
-      <section className="flex justify-center gap-6 w-full h-full py-4 ">
+      <section className="flex md:justify-center flex-col md:flex-row  gap-6 w-full h-full py-4 ">
         <div className="flex gap-3 flex-col">
           <NewsTradingViewWidget></NewsTradingViewWidget>
           <TradingViewScreener></TradingViewScreener>

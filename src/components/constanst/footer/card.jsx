@@ -32,7 +32,7 @@ export default function Card() {
           </h3>
         </div>
 
-        <div className=" flex gap-6  justify-around ">
+        <div className=" flex gap-6 flex-col items-center  md:justify-around md:flex-row ">
           {card.map((cards, index) => (
             <div key={index} className="border-2 p-8 w-3/4  ">
               <h4 className="text-navblue font-semibold text-2xl capitalize">{cards.title}</h4>

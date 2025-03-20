@@ -12,7 +12,7 @@ const NewsTradingViewWidget = () => {
         feedMode: "all_symbols",
         isTransparent: false,
         displayMode: "adaptive",
-        width: "700",
+        width: "750",
         height: "500",
         colorTheme: "light",
         locale: "en",
