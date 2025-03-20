@@ -21,7 +21,7 @@ export default function NavBar() {
   };
 
   return (
-    <section className="max-w-full h-full bg-navblue md:px-6 md:py-6 p-0">
+    <section className="max-w-full h-[20vh] md:h-full bg-navblue p-4 md:px-6 md:py-6 ">
       <div className="flex w-full h-full">
         <div className="flex flex-col items-start md:items-start w-full h-full">
           {/* Logo and text */}
@@ -33,53 +33,53 @@ export default function NavBar() {
                 alt="Menu"
               />
               {ismenu && (
-                <div className="w-screen max-h-full bg-white rounded-sm shadow-sm z-50 absolute ">
+                <div className="w-screen  h-[120vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
                   <ul className="w-full h-full p-2 flex flex-col gap-4">
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       open a depot
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       etf Savings plan
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       profile
                     </li>
-                    <div className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue "></div>
+                    <div className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue "></div>
                    <div className="underline border-navblue border-2 border"></div>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       shares
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       news
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       indices
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       funds
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       etfs
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       Certificates
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       leverage products
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       raw materials
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       bonds
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       Crypto
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       currency
                     </li>
-                    <li className="text-xl capitalize hover:text-blue-400 hover:underline font-bold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       counsellor
                     </li>
                   </ul>
@@ -137,7 +137,7 @@ export default function NavBar() {
               </div>
             </button>
             {isShareProfileOpen && (
-              <div className="absolute bg-white shadow-lg rounded-lg py-4 mt-2 w-[20vw] p-4 z-10">
+              <div className="absolute bg-white shadow-lg rounded-lg py-4 mt-2 w-[20vw] p-4 z-40 right-10">
                 <ul className="w-full h-full flex flex-col gap-4">
                   <Link to="/overview">
                     <li className="capitalize hover:underline hover:text-blue-500">overview</li>
@@ -208,7 +208,7 @@ export default function NavBar() {
               {/* Dropdown Menu */}
               {isSharesDropdownOpen && (
                 <ul className="absolute bg-white shadow-lg rounded-lg py-4 mt-2 w-64 z-10">
-                  <p className="text-xl capitalize text-navblue underline p-2">stock overview</p>
+                  <p className="text-lg capitalize text-navblue underline p-2">stock overview</p>
                   <li className="capitalize px-4 py-2 hover:bg-gray-200">
                     <a href="#broker-overview" className="text-navblue capitalize text-sm">Broker Overview</a>
                   </li>
@@ -256,6 +256,8 @@ export default function NavBar() {
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
               <a href="#advisor" aria-label="Go to Advisor section">Counselor</a>
+
+
             </li>
           </ul>
         </nav>
