@@ -39,17 +39,23 @@ export default function NavBar() {
               />
               {ismenu && (
                 <div className="w-screen  h-[150vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
-                  <ul className="w-full h-full p-2 flex flex-col gap-4">
+                  <ul className="w-full h-full p-4 flex flex-col gap-4">
+                   <Link to={"https://shorturl.at/OHjQJ"} className=" flex w-full gap-2 items-center">
+                   <img className="w-10 h-10" alt="" src="/img/grid/img-oskar-logo.svg"></img>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       open a depot
                     </li>
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
+                   <Link to={'https://shorturl.at/cBCgr'} className=" flex w-full gap-2 items-center">
+                   <img className="w-10 h-10" src="/img/grid/zero.svg" alt=""></img>
+                   <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
                       etf Savings plan
                     </li>
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
                     <li onClick={toggleInsideProfile} className="text-lg capitalize  hover:underline font-semibold text-navblue ">
-                      profile
+                      log in
                       {isProfile &&  <ul className="w-full h-full flex flex-col gap-4 p-4 no-underline ">
                   <Link to="/overview"  className=" flex w-full gap-2 items-center">
                   <img src="/navicons/ice-cube.png" alt="overview" className="w-4 h-4"></img>
@@ -179,8 +185,9 @@ export default function NavBar() {
         <div className="flex gap-4 py-4 hidden sm:flex sm:gap-8">
           <div>
             <Link to={"https://tinyurl.com/48e5evud"}>
-              <button className="btn bg-white border-red-300 text-red-500 font-medium capitalize rounded-lg shadow-md w-36 h-10 hover:bg-red-100 transition-colors ease-in-out">
-                1 Share Free
+              
+              <button  className="p-1 btn bg-white border-red-300 text-red-500 font-medium capitalize rounded-lg shadow-md w-36 h-10 hover:bg-red-100 transition-colors ease-in-out flex items-center">
+              <img src="/img/grid/zero.svg" className="w-10 h-20 "></img> 1 Share Free
               </button>
             </Link>
           </div>
