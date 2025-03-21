@@ -50,48 +50,61 @@ export default function NavBar() {
                     <div className=" border-gray-400 border w-full "></div>
                     <li onClick={toggleInsideProfile} className="text-lg capitalize  hover:underline font-semibold text-navblue ">
                       profile
-                      {isProfile && <ul className="w-full h-full flex flex-col gap-4    p-4">
-                      <Link to="/overview">
-                        <li className="capitalize hover:underline hover:text-blue-500">overview</li>
-                      </Link>
-                      <Link to="/profileData">
-                        <li className="capitalize hover:underline hover:text-blue-500">securities</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">model portfolios</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">watchlist</li>
-                      </Link>
-                      <Link to="https://www.tradingview.com/markets/stocks-usa/#hotlist-stocks-widget">
-                        <li className="capitalize hover:underline hover:text-blue-500">my news</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">newsletter</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">forum</li>
-                      </Link>
-                      <Link to="https://www.tradingdesk.de/">
-                        <li className="capitalize hover:underline hover:text-blue-500">trading desk</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">apps</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">social media</li>
-                      </Link>
-                      <Link to="https://www.thestockpodcast.com/episodes/">
-                        <li className="capitalize hover:underline hover:text-blue-500">podcast</li>
-                      </Link>
-                      <div className="text-white font-semibold underline mt-2 border-b-4 border-navblue"></div>
-                      <Link to="/login">
-                        <li className="capitalize hover:underline hover:text-blue-500">profile</li>
-                      </Link>
-                      <Link to="#">
-                        <li className="capitalize hover:underline hover:text-blue-500">logout</li>
-                      </Link>
-                    </ul>}
+                      {isProfile &&  <ul className="w-full h-full flex flex-col gap-4 p-4 no-underline ">
+                  <Link to="/overview"  className=" flex w-full gap-2 items-center">
+                  <img src="/navicons/ice-cube.png" alt="overview" className="w-4 h-4"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">overview</li>
+                  </Link>
+                  <Link to="/profileData"  className=" flex w-full gap-2 items-center">
+                   <img className="h-4 w-4" src="/navicons/packages.png" alt="shinnig"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">securities</li>
+                  </Link>
+                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                  <img className="h-4 w-4" src="/navicons/shining.png" alt="shinnig"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">model portfolios</li>
+                  </Link>
+                  <Link to="#"  className=" flex w-full gap-2 items-center" >
+                    <img src="/navicons/star.png" className="h-4 w-4" alt="star"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">watchlist</li>
+                  </Link>
+                  <Link to="https://www.tradingview.com/markets/stocks-usa/#hotlist-stocks-widget"  className=" flex w-full gap-2 items-center">
+                    <img className="w-4 h-4" src="/navicons/news.png" alt="news"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">my news</li>
+                  </Link>
+                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                    <img src="/navicons/telegram.png" alt="newsletter" className="w-4 h-4"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">newsletter</li>
+                  </Link>
+                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                    <img className="h-4 w-4" src="/navicons/forum.png" alt="forum"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">forum</li>
+                  </Link>
+                  <Link to="https://www.tradingdesk.de/"  className=" flex w-full gap-2 items-center">
+                    <img src="/navicons/presentation.png" alt="trading" className="w-4 h-4"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">trading desk</li>
+                  </Link>
+                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                    <img className="w-4 h-4" alt="" src="/navicons/mobile-phone.png"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">apps</li>
+                  </Link>
+                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                   <img className="w-4 h-4" src="/navicons/thumbs-up.png" alt="social"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">social media</li>
+                  </Link>
+                  <Link to="https://www.thestockpodcast.com/episodes/"  className=" flex w-full gap-2 items-center">
+                     <img className="w-4 h-4" src="/navicons/podcast.png" alt=""></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">podcast</li>
+                  </Link>
+                  <div className="text-white font-semibold underline mt-2 border-b-4 border-navblue"></div>
+                  <Link to="/login" className=" flex w-full gap-2 items-center" >
+                  <img className="w-4 h-4 " src="/img/profile.png" alt="profile"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">profile</li>
+                  </Link>
+                  <Link to="#" className=" flex w-full gap-2 items-center" >
+                     <img className="h-4 w-4" src="/navicons/quit.png" alt="quit"></img>
+                    <li className="capitalize hover:underline hover:text-blue-500">logout</li>
+                  </Link>
+                </ul>}
                     </li>
                   
                     <div className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue "></div>
@@ -233,7 +246,7 @@ export default function NavBar() {
                     <li className="capitalize hover:underline hover:text-blue-500">trading desk</li>
                   </Link>
                   <Link to="#"  className=" flex w-full gap-2 items-center">
-                    <img className="w-4 h-4" src="/navicons/mobile-phone.png"></img>
+                    <img className="w-4 h-4" alt="" src="/navicons/mobile-phone.png"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">apps</li>
                   </Link>
                   <Link to="#"  className=" flex w-full gap-2 items-center">
@@ -249,7 +262,7 @@ export default function NavBar() {
                   <img className="w-4 h-4 " src="/img/profile.png" alt="profile"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">profile</li>
                   </Link>
-                  <Link to="#" className=" flex w-full gap-2 items-center">
+                  <Link to="#" className=" flex w-full gap-2 items-center" >
                      <img className="h-4 w-4" src="/navicons/quit.png" alt="quit"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">logout</li>
                   </Link>

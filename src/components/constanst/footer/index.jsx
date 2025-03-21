@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-16">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-col gap-6 md:flex-row md:justify-between w-full h-full">
           
           {/* Pursue Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Pursue</h3>
-            <ul className="space-y-3">
+            <ul className="">
               <li>
                 <a href="#contact" className="hover:text-gray-400 transition-colors">Contact Us</a>
               </li>
@@ -71,16 +71,19 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-6">
               <a href="#facebook" className="text-gray-300 hover:text-white transition-colors">
-                <img  src="" alt=""></img>
+                <img  className="w-10 h-10" src="/img/icons/facebook.png" alt="facebook"></img>
               </a>
               <a href="#twitter" className="text-gray-300 hover:text-white transition-colors">
-                <i className="fab fa-twitter"></i>
+                <img className="w-10 h-10" src="/img/icons/twitter (1).png" alt="twitter"></img>
               </a>
               <a href="#linkedin" className="text-gray-300 hover:text-white transition-colors">
-                <i className="fab fa-linkedin-in"></i>
+                <img className="w-10 h-10" src="/img/icons/linkedin.png" alt="link"></img>
               </a>
               <a href="#instagram" className="text-gray-300 hover:text-white transition-colors">
-                <i className="fab fa-instagram"></i>
+                <img className="w-10 h-10" src="/img/icons/instagram (1).png" alt="instagram"></img>
+              </a>
+              <a href="#instagram" className="text-gray-300 hover:text-white transition-colors">
+                <img className="w-10 h-10" src="/img/icons/social (3).png" alt="instagram"></img>
               </a>
             </div>
           </div>
