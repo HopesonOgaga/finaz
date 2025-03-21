@@ -71,7 +71,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-6">
               <a href="#facebook" className="text-gray-300 hover:text-white transition-colors">
-                <i className="fab fa-facebook-f"></i>
+                <img  src="" alt=""></img>
               </a>
               <a href="#twitter" className="text-gray-300 hover:text-white transition-colors">
                 <i className="fab fa-twitter"></i>
