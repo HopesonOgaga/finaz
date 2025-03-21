@@ -11,6 +11,8 @@ import Inside from "../footer/info";
 import Footer from "../footer";
 import LinksFooter from "../footer/links";
 import Card from "../footer/card";
+import SymboliewWidget from "../../api/charts/symbil";
+import TradingViewTickerTape from "../../api/charts/screener";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
       {/* head section */}
       <div>
         <NavBar></NavBar>
+        <TradingViewTickerTape></TradingViewTickerTape>
       </div>
       <section className="flex md:justify-center flex-col md:flex-row  gap-10   max-w-full h-full py-4 ">
         <div className="flex gap-4 flex-col">
@@ -31,11 +34,16 @@ export default function Home() {
           <TradingViewEtfHeatmap></TradingViewEtfHeatmap>
         </div>
       </section>
-      <section className="w-full h-screen">
+      {/* <section className="w-full h-screen">
         <RealTimeChart></RealTimeChart>
+      </section> */}
+      <section className="w-full h-screen">
+        <SymboliewWidget></SymboliewWidget>
       </section>
-      <section className="w-full h-full"><NewsTradingViewWidget></NewsTradingViewWidget></section>
-      <section><Card></Card></section>
+
+      <section>
+        <Card></Card>
+      </section>
       <div>
         <StockFooter></StockFooter>
         <LinksFooter></LinksFooter>

@@ -10,6 +10,10 @@ module.exports = {
         navpink: "#E83F81",  // Custom pink color
         navsky: "#5398E8",   // Custom sky color
       },
+      fontFamily :{
+        lato: ["Lato", "sans-serif"]
+
+      }
     },
   },
   variants: {

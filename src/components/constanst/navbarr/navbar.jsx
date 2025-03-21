@@ -30,13 +30,13 @@ export default function NavBar() {
       <div className="flex w-full h-full">
         <div className="flex flex-col items-start md:items-start w-full h-full">
           {/* Logo and text */}
-          <div className="text-2xl font-bold flex items-center gap-3">
-            <div >
-              <img onClick={toggleMenu}
-                className="md:hidden block w-10 h-8 rounded-sm shadow-md bg-white cursor-pointer"
-                src="/img/icons/menu.png"
-                alt="Menu"
-              />
+          <div className="text-2xl font-bold flex items-center gap-4">
+            <div className=" w-full h-full " >
+              <div onClick={toggleMenu} className="md:hidden block w-full h-full flex flex-col justify-between items-center cursor-pointer">
+                <div className={`w-10 h-1 bg-white rounded-sm transition-transform duration-300 ${ismenu ? "rotate-45 translate-y-2" : ""}`}></div>
+                <div className={`w-10 h-1 bg-white rounded-sm transition-opacity duration-300 ${ismenu ? "opacity-0" : "opacity-100"}`}></div>
+                <div className={`w-10 h-1 bg-white rounded-sm transition-transform duration-300 ${ismenu ? "-rotate-45 -translate-y-2" : ""}`}></div>
+              </div>
               {ismenu && (
                 <div className="w-screen  h-[150vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
                   <ul className="w-full h-full p-4 flex flex-col gap-4">
@@ -319,16 +319,16 @@ export default function NavBar() {
               )}
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#news" aria-label="Go to News section">News</a>
+              <a href="https://www.tradingview.com/markets/world-stocks/news/" aria-label="Go to News section">News</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#indices" aria-label="Go to Indices section">Indices</a>
+              <a href="https://www.tradingview.com/markets/indices/" aria-label="Go to Indices section">Indices</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
               <a href="#funds" aria-label="Go to Funds section">Funds</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#etfs" aria-label="Go to ETFs section">ETFs</a>
+              <a href="https://www.tradingview.com/markets/etfs/" aria-label="Go to ETFs section">ETFs</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
               <a href="#certificates" aria-label="Go to Certificates section">Certificates</a>
@@ -340,13 +340,13 @@ export default function NavBar() {
               <a href="#commodities" aria-label="Go to Commodities section">Commodities</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#bonds" aria-label="Go to Bonds section">Bonds</a>
+              <a href="https://www.tradingview.com/markets/bonds/" aria-label="Go to Bonds section">Bonds</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#crypto" aria-label="Go to Crypto section">Crypto</a>
+              <a href="https://www.tradingview.com/markets/cryptocurrencies/" aria-label="Go to Crypto section">Crypto</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#currency" aria-label="Go to Currency section">Currency</a>
+              <a href="https://www.tradingview.com/markets/currencies/" aria-label="Go to Currency section">Currency</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
               <a href="https://www.finanzen.net/ratgeber/" aria-label="Go to Advisor section">Counselor</a>
