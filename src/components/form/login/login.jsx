@@ -3,8 +3,22 @@ import Footer from "../../constanst/footer";
 import Inside from "../../constanst/footer/info";
 import LinksFooter from "../../constanst/footer/links";
 import NavBar from "../../constanst/navbarr/navbar";
+import { use, useState } from "react";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function HandleSubmit(e) {
+    e.preventDefault();
+
+    const user = {
+      email,
+      password,
+    };
+    console.log(user)
+  }
+
   return (
     <>
       <NavBar></NavBar>
@@ -22,11 +36,14 @@ export default function Login() {
             </div>
             <div className="w-full h-full flex flex-col md:flex-row gap-8 md:gap-16">
               <div className="w-full md:w-2/3">
-                <form className="w-full">
+                <form className="w-full" onSubmit={HandleSubmit}>
                   <div className="flex flex-col gap-4 w-full">
                     {/* Email / Username */}
                     <div className="w-full">
                       <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        name="email"
                         type="email"
                         placeholder="Email address or username"
                         required
@@ -36,6 +53,9 @@ export default function Login() {
                     {/* Password */}
                     <div className="w-full">
                       <input
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        name="password"
                         type="password"
                         placeholder="Password"
                         required
@@ -47,9 +67,9 @@ export default function Login() {
                   <div className="flex flex-col gap-4 mt-6">
                     {/* Register Button */}
                     <div className="mt-6">
-                      <Link to={'/register'} className="w-full h-full">
+                      <Link to={"/register"} className="w-full h-full">
                         {" "}
-                        <button className="bg-navgreen text-white font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-green-300 hover:scale-110 transition">
+                        <button  className="bg-navgreen text-white font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-green-300 hover:scale-110 transition">
                           Register
                         </button>
                       </Link>
@@ -89,7 +109,7 @@ export default function Login() {
                   <div className="mt-4">
                     <Link to={"/register"} className="w-full h-full">
                       {" "}
-                      <button className="border-navgreen text-navgreen font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-navblue active:text-white hover:text-white hover:scale-110 transition">
+                      <button  className="border-navgreen text-navgreen font-medium capitalize text-center w-full h-10 rounded-md shadow-sm hover:bg-navblue active:text-white hover:text-white hover:scale-110 transition">
                         Create a free account now
                       </button>
                     </Link>
