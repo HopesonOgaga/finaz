@@ -298,7 +298,7 @@ export default function NavBar() {
               onMouseEnter={toggleSharesDropdown}
               onMouseLeave={toggleSharesDropdown}
             >
-              <a href="#shares" aria-label="Go to Shares section">Shares</a>
+              <a href="https://shorturl.at/CKHFo" aria-label="Go to Shares section">Shares</a>
               {/* Dropdown Menu */}
               {isSharesDropdownOpen && (
                 <ul className="absolute bg-white shadow-lg rounded-lg py-4 mt-2 w-64 z-10">
@@ -349,7 +349,7 @@ export default function NavBar() {
               <a href="#currency" aria-label="Go to Currency section">Currency</a>
             </li>
             <li className="capitalize hover:text-gray-300 transition-colors">
-              <a href="#advisor" aria-label="Go to Advisor section">Counselor</a>
+              <a href="https://www.finanzen.net/ratgeber/" aria-label="Go to Advisor section">Counselor</a>
             </li>
           </ul>
         </nav>

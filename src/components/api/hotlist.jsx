@@ -40,7 +40,7 @@ const TradingViewHotlistsWidget = () => {
   }, []); // The empty dependency array ensures this effect runs only once when mounted
 
   return (
-    <div className="tradingview-widget-container" style={{ width: "100%", height: "550px" }}>
+    <div className="tradingview-widget-container " style={{ width: "100%", height: "550px" }}>
       <div id="tradingview-hotlists-widget"></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">

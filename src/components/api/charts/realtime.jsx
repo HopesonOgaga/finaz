@@ -26,7 +26,7 @@ const   RealTimeChart = () => {
   }, []);
 
   return (
-    <div className="tradingview-widget-container h-screen pl-6 pr-6 " style={{ height: '80vh', width: '100%' }} id="tradingview-widget-container">
+    <div className="tradingview-widget-container h-screen pl-6 pr-6 " style={{ height: '100vh', width: '100%' }} id="tradingview-widget-container">
       <div className="tradingview-widget-container__widget" style={{ height: 'calc(100% - 32px)', width: '100%' }}></div>
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/" rel="noopener nofollow" target="">

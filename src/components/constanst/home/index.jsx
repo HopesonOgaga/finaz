@@ -19,8 +19,8 @@ export default function Home() {
       <div>
         <NavBar></NavBar>
       </div>
-      <section className="flex md:justify-center flex-col md:flex-row  gap-6 w-full h-full py-4 ">
-        <div className="flex gap-3 flex-col">
+      <section className="flex md:justify-center flex-col md:flex-row  gap-10   max-w-full h-full py-4 ">
+        <div className="flex gap-4 flex-col">
           <NewsTradingViewWidget></NewsTradingViewWidget>
           <TradingViewScreener></TradingViewScreener>
           <DateQuotesWidget></DateQuotesWidget>
@@ -31,9 +31,10 @@ export default function Home() {
           <TradingViewEtfHeatmap></TradingViewEtfHeatmap>
         </div>
       </section>
-      <section>
+      <section className="w-full h-screen">
         <RealTimeChart></RealTimeChart>
       </section>
+      <section className="w-full h-full"><NewsTradingViewWidget></NewsTradingViewWidget></section>
       <section><Card></Card></section>
       <div>
         <StockFooter></StockFooter>
