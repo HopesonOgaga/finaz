@@ -1,12 +1,12 @@
 const dashLinks = [
   {
     link1: { label: "Overview", url: "/overview" },
-    link2: { label: "Security Account", url: "/security-account" },
-    link3: { label: "Model Portfolios", url: "/model-portfolios" },
-    link4: { label: "Watchlist", url: "/watchlist" },
-    link5: { label: "My News", url: "/my-news" },
-    link6: { label: "Newsletter", url: "/newsletter" },
-    link7: { label: "Profile", url: "/profile" },
+    // link2: { label: "Security Account", url: "/security-account" },
+    // link3: { label: "Model Portfolios", url: "/model-portfolios" },
+    // link4: { label: "Watchlist", url: "/watchlist" },
+    // link5: { label: "My News", url: "/my-news" },
+    // link6: { label: "Newsletter", url: "/newsletter" },
+    // link7: { label: "Profile", url: "/profile" },
   },
 ];
 

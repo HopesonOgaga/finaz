@@ -256,7 +256,7 @@ export default function NavBar() {
                     <img className="w-4 h-4" alt="" src="/navicons/mobile-phone.png"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">apps</li>
                   </Link>
-                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                  <Link to="/social"  className=" flex w-full gap-2 items-center">
                    <img className="w-4 h-4" src="/navicons/thumbs-up.png" alt="social"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">social media</li>
                   </Link>

@@ -5,7 +5,7 @@ import LinksFooter from "../../constanst/footer/links";
 import NavBar from "../../constanst/navbarr/navbar";
 import { use, useState } from "react";
 
-export default function Login() {
+export default function Login({ setUserData}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,6 +16,7 @@ export default function Login() {
       email,
       password,
     };
+    
     console.log(user)
   }
 
