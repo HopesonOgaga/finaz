@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import NavFaq from "../faq";
 
 export default function NavBar() {
   // State to manage dropdown visibility
@@ -38,7 +39,7 @@ export default function NavBar() {
                 <div className={`w-10 h-1 bg-white rounded-sm transition-transform duration-300 ${ismenu ? "-rotate-45 -translate-y-2" : ""}`}></div>
               </div>
               {ismenu && (
-                <div className="w-screen  h-[150vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
+                <div className="w-screen  h-[270vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
                   <ul className="w-full h-full p-4 flex flex-col gap-4">
                    <Link to={"https://shorturl.at/OHjQJ"} className=" flex w-full gap-2 items-center">
                    <img className="w-10 h-10" alt="" src="/img/grid/img-oskar-logo.svg"></img>
@@ -56,7 +57,7 @@ export default function NavBar() {
                     <div className=" border-gray-400 border w-full "></div>
                     <li onClick={toggleInsideProfile} className="text-lg capitalize  hover:underline font-semibold text-navblue ">
                       log in
-                      {isProfile &&  <ul className="w-full h-full flex flex-col gap-4 p-4 no-underline ">
+                      {isProfile &&  <ul className="w-full h-full flex flex-col gap-4 mt-4 ">
                   <Link to="/overview"  className=" flex w-full gap-2 items-center">
                   <img src="/navicons/ice-cube.png" alt="overview" className="w-4 h-4"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">overview</li>
@@ -93,7 +94,7 @@ export default function NavBar() {
                     <img className="w-4 h-4" alt="" src="/navicons/mobile-phone.png"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">apps</li>
                   </Link>
-                  <Link to="#"  className=" flex w-full gap-2 items-center">
+                  <Link to="/social"  className=" flex w-full gap-2 items-center">
                    <img className="w-4 h-4" src="/navicons/thumbs-up.png" alt="social"></img>
                     <li className="capitalize hover:underline hover:text-blue-500">social media</li>
                   </Link>
@@ -115,8 +116,9 @@ export default function NavBar() {
                   
                     <div className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue "></div>
                    <div className="underline border-navblue border-2 border"></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
+                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link>
                       shares
+                        <section><NavFaq></NavFaq></section>
                     </li>
                     <div className=" border-gray-400 border w-full "></div>
                     <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
