@@ -7,6 +7,9 @@ import Register from "./components/form/register/register";
 import ProfileData from "./components/dashboard/profile/overview/profileData";
 import SocialMedia from "./components/pages/social";
 import CryptoDepositDashboard from "./components/dashboard/crypto dashboard";
+import NewsComponent from "./components/api/news/inex";
+import TeslaNews from "./components/api/news/tels";
+import BusinessNews from "./components/api/news/business";
 function App() {
   const [userData, setUserData] = useState({});
   return (
@@ -33,6 +36,9 @@ function App() {
             ></CryptoDepositDashboard>
           }
         ></Route>
+        <Route path="/news" element={<NewsComponent></NewsComponent>}></Route>
+        <Route path="/telsa" element={<TeslaNews></TeslaNews>}></Route>
+        <Route path="/business" element={<BusinessNews></BusinessNews>}></Route>
       </Routes>
     </BrowserRouter>
   );

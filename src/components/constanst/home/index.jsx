@@ -13,6 +13,12 @@ import LinksFooter from "../footer/links";
 import Card from "../footer/card";
 import SymboliewWidget from "../../api/charts/symbil";
 import TradingViewTickerTape from "../../api/charts/screener";
+import NewsComponent from "../../api/news/inex";
+import ElonComponent from "../../api/news/inex2";
+import StockViewWidget from "../../api/stockheat";
+import TeslaNews from "../../api/news/tels";
+import BusinessNews from "../../api/news/business";
+import AppleNews from "../../api/news/aplle";
 
 export default function Home() {
   return (
@@ -22,17 +28,26 @@ export default function Home() {
         <NavBar></NavBar>
         <TradingViewTickerTape></TradingViewTickerTape>
       </div>
-      <section className="flex md:justify-center flex-col md:flex-row  gap-10   max-w-full h-full py-4 ">
+      <section className="flex md:justify-center flex-col md:flex-row flex-wrap   gap-10   max-w-full h-full py-4 ">
         <div className="flex gap-4 flex-col">
           <NewsTradingViewWidget></NewsTradingViewWidget>
           <TradingViewScreener></TradingViewScreener>
           <DateQuotesWidget></DateQuotesWidget>
         </div>
-        <div className="flex flex-col gap-4 ">
+       
+        <div className="flex flex-col gap-4 h-screen ">
           <CalendarWidget></CalendarWidget>
           <TradingViewHotlistsWidget></TradingViewHotlistsWidget>
-          <TradingViewEtfHeatmap></TradingViewEtfHeatmap>
+          <TradingViewEtfHeatmap ></TradingViewEtfHeatmap>
         </div>
+      </section>
+      <section>
+        {" "}
+        <section className="w-full h-full">
+          <NewsComponent></NewsComponent>
+          <BusinessNews></BusinessNews>
+        </section>
+      
       </section>
       {/* <section className="w-full h-screen">
         <RealTimeChart></RealTimeChart>
@@ -44,6 +59,8 @@ export default function Home() {
       <section>
         <Card></Card>
       </section>
+      <ElonComponent></ElonComponent>
+      <TeslaNews></TeslaNews>
       <div>
         <StockFooter></StockFooter>
         <LinksFooter></LinksFooter>
