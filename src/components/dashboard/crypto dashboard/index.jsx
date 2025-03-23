@@ -1,32 +1,11 @@
 import React, { useState } from "react";
-import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
 import NavBar from "../../constanst/navbarr/navbar";
 import LinksFooter from "../../constanst/footer/links";
 import Footer from "../../constanst/footer";
+import { FaCopy } from "react-icons/fa";
 
-// Register Chart.js components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
+// Sample state data for user wallet and deposit history
 const CryptoDepositDashboard = () => {
-  // Sample state data for user wallet and deposit history
   const [walletBalance, setWalletBalance] = useState({
     BTC: 2.5,
     ETH: 5.3,
@@ -59,12 +38,13 @@ const CryptoDepositDashboard = () => {
 
   const [selectedCurrency, setSelectedCurrency] = useState("Bitcoin (BTC)");
   const [depositAmount, setDepositAmount] = useState("");
+  const [copied, setCopied] = useState(null);
 
-  // User Info (Profile)
-  const user = {
-    name: "John Doe",
-    email: "johndoe@example.com",
-    avatar: "https://i.pravatar.cc/150?img=3", // Placeholder avatar image
+  // Default Wallet Addresses for each cryptocurrency
+  const walletAddresses = {
+    "Bitcoin (BTC)": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "Ethereum (ETH)": "0x32Be343B94f860124dC4fEe278FDCBD38C102D88",
+    "Litecoin (LTC)": "LTPuHZzEnwFdjPMcL44vhEukymaymXrD2r",
   };
 
   // Handle deposit form submission
@@ -84,18 +64,14 @@ const CryptoDepositDashboard = () => {
     setDepositAmount(""); // Reset the input field
   };
 
-  // Chart Data for balance visualization (Sample data)
-  const chartData = {
-    labels: ["BTC", "ETH", "LTC"],
-    datasets: [
-      {
-        label: "Balance",
-        data: [walletBalance.BTC, walletBalance.ETH, walletBalance.LTC],
-        fill: false,
-        borderColor: "#34D399", // Tailwind green
-        tension: 0.1,
-      },
-    ],
+  // Copy address to clipboard
+  const handleCopy = (address) => {
+    navigator.clipboard.writeText(address)
+      .then(() => {
+        setCopied(address);
+        setTimeout(() => setCopied(null), 2000);  // Reset after 2 seconds
+      })
+      .catch((err) => console.error('Failed to copy: ', err));
   };
 
   return (
@@ -116,30 +92,14 @@ const CryptoDepositDashboard = () => {
           {/* User Profile */}
           <div className="bg-white p-6 rounded-lg shadow-md mb-8 flex items-center space-x-4">
             <img
-              src={user.avatar}
+              src="https://i.pravatar.cc/150?img=3"
               alt="User Avatar"
               className="w-16 h-16 rounded-full"
             />
             <div>
-              <h2 className="text-xl font-semibold text-gray-800">
-                {user.name}
-              </h2>
-              <p className="text-gray-600">{user.email}</p>
+              <h2 className="text-xl font-semibold text-gray-800">John Doe</h2>
+              <p className="text-gray-600">johndoe@example.com</p>
             </div>
-          </div>
-
-          {/* Wallet Balance Chart */}
-          <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Wallet Balance
-            </h2>
-            <Line
-              data={chartData}
-              options={{
-                responsive: true,
-                scales: { x: { beginAtZero: true }, y: { beginAtZero: true } },
-              }}
-            />
           </div>
 
           {/* Deposit Form */}
@@ -175,6 +135,28 @@ const CryptoDepositDashboard = () => {
                 placeholder="Enter amount"
               />
             </div>
+
+            {/* Display and Copy Wallet Address */}
+            <div className="mb-4">
+              <label htmlFor="walletAddress" className="block text-gray-600">
+                {selectedCurrency} Wallet Address
+              </label>
+              <div className="flex items-center space-x-2 mt-2">
+                <span
+                  id="walletAddress"
+                  className="w-full break-all text-gray-700"
+                >
+                  {walletAddresses[selectedCurrency]}
+                </span>
+                <button
+                  onClick={() => handleCopy(walletAddresses[selectedCurrency])}
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  <FaCopy /> {copied === walletAddresses[selectedCurrency] ? "Copied!" : "Copy"}
+                </button>
+              </div>
+            </div>
+
             <button
               onClick={handleDeposit}
               className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
