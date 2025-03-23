@@ -10,6 +10,8 @@ import CryptoDepositDashboard from "./components/dashboard/crypto dashboard";
 import NewsComponent from "./components/api/news/inex";
 import TeslaNews from "./components/api/news/tels";
 import BusinessNews from "./components/api/news/business";
+import Test from "./components/api/news/test";
+import NavBar from "./components/constanst/faq";
 function App() {
   const [userData, setUserData] = useState({});
   return (
@@ -39,6 +41,8 @@ function App() {
         <Route path="/news" element={<NewsComponent></NewsComponent>}></Route>
         <Route path="/telsa" element={<TeslaNews></TeslaNews>}></Route>
         <Route path="/business" element={<BusinessNews></BusinessNews>}></Route>
+        <Route path="/test" element={<Test></Test>}></Route>
+        <Route path="/navbar" element={<NavBar></NavBar>}></Route>
       </Routes>
     </BrowserRouter>
   );
