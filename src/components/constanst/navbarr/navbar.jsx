@@ -8,11 +8,17 @@ export default function NavBar() {
   const [isShareProfileOpen, setProfileOpen] = useState(false);
   const [ismenu, setMenuOpen] = useState(false);
   const [isProfile, setProfile] = useState(false)
+  const [isNavbar, setNavBar]=useState(false)
 
   // Function to toggle dropdown visibility
   const toggleSharesDropdown = () => {
     setIsSharesDropdownOpen(!isSharesDropdownOpen);
   };
+
+  const toggleNavbar=()=>{
+    setNavBar(!isNavbar)
+
+  }
 
   const toggleProfile = () => {
     setProfileOpen(!isShareProfileOpen);
@@ -116,54 +122,114 @@ export default function NavBar() {
                   
                     <div className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue "></div>
                    <div className="underline border-navblue border-2 border"></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link>
-                      shares
-                        <section><NavFaq></NavFaq></section>
-                    </li>
+                   <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           shares
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      news
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           news
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      indices
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           indices
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      funds
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           funds
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      etfs
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           etf
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      Certificates
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           Certificates
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      leverage products
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           leverage products 
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      raw materials
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           bonds
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      bonds
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           raw malterials
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      Crypto
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           crypto
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      currency
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           Currency
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
                     <div className=" border-gray-400 border w-full "></div>
-                    <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue ">
-                      counsellor
-                    </li>
+                    <Link to={""} className="">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                           Counselor
+                      </li>
+                    {
+                          isNavbar && <NavFaq></NavFaq>
+                        }
+                   </Link>
+                   
                   </ul>
                 </div>
               )}

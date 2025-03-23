@@ -35,7 +35,7 @@ export default function NavFaq() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <span>More Stock Links</span>
+        <span></span>
         {isOpen ? (
           <FaMinusCircle size={20} style={{ marginLeft: '10px' }} />
         ) : (
