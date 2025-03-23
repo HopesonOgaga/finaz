@@ -34,20 +34,19 @@ export default function Home() {
           <TradingViewScreener></TradingViewScreener>
           <DateQuotesWidget></DateQuotesWidget>
         </div>
-       
-        <div className="flex flex-col gap-4 h-screen ">
+
+        <div className="flex flex-col gap-4 h-full">
           <CalendarWidget></CalendarWidget>
           <TradingViewHotlistsWidget></TradingViewHotlistsWidget>
-          <TradingViewEtfHeatmap ></TradingViewEtfHeatmap>
+          <TradingViewEtfHeatmap></TradingViewEtfHeatmap>
         </div>
       </section>
       <section>
         {" "}
-        <section className="w-full h-full">
+        <section className="w-full  flex flex-col gap-6 ">
           <NewsComponent></NewsComponent>
           <BusinessNews></BusinessNews>
         </section>
-      
       </section>
       {/* <section className="w-full h-screen">
         <RealTimeChart></RealTimeChart>
@@ -56,12 +55,15 @@ export default function Home() {
         <SymboliewWidget></SymboliewWidget>
       </section>
 
-      <section>
+      <section className="w-full h-full mb-10">
         <Card></Card>
       </section>
-      <ElonComponent></ElonComponent>
-      <TeslaNews></TeslaNews>
-      <div>
+      <section className="w-full h-full flex flex-col gap-6 ">
+        {" "}
+        <ElonComponent></ElonComponent>
+        <TeslaNews></TeslaNews>
+      </section>
+      <div className="mt-6 mb-6">
         <StockFooter></StockFooter>
         <LinksFooter></LinksFooter>
         <Footer></Footer>
