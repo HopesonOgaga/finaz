@@ -9,8 +9,52 @@ export default function NavBar() {
   const [ismenu, setMenuOpen] = useState(false);
   const [isProfile, setProfile] = useState(false)
   const [isNavbar, setNavBar]=useState(false)
-
+  const [isNews , setNewsBar] = useState(false)
+  const [isIndices , setIndices] = useState(false)
+  const [isFunds, setFunds] = useState(false)
+  const [isCertificates, setCertificates] = useState(false)
+  const [isEtfs, setEtfs] = useState(false)
+  const [isLeverage , setLeverage] = useState(false)
+  const [isBonds, setBonds] = useState(false) 
+  const [isMalterials, setMlaterials] = useState(false)
+  const [isCurrency, setCurrency]= useState(false)
+  const [isCounselor, setCounselor] = useState(false)
+  const [iscrypto, setCrypto] = useState(false)
   // Function to toggle dropdown visibility
+  const toggleCurrency=()=>{
+    setCurrency(isCurrency)
+  }
+  const toggleCrypto =()=>{
+    setCrypto(!iscrypto)
+  }
+  const toggleCounselor =()=>{
+    setCounselor(!isCounselor)
+  }
+  
+  const toggleMalterials =()=>{
+    setMlaterials(!isMalterials)
+  }
+  const toggleFunds =()=>{
+          setFunds(!isFunds)
+  }
+   const toggleIndices = ()=>{
+          setIndices(!isIndices)
+   }
+   const togglecertificates =()=>{
+    setCertificates(!isCertificates)
+   }
+   const toggleEtfs =()=>{
+    setEtfs(!isEtfs)
+   }
+   const toggleLeverage =()=>{
+      setLeverage(!isLeverage)
+   }
+   const toggleBonds =()=>{
+         setBonds(!isBonds)
+   }
+  const toggleNews =()=>{
+    setNewsBar(!isNews)
+  }
   const toggleSharesDropdown = () => {
     setIsSharesDropdownOpen(!isSharesDropdownOpen);
   };
@@ -45,7 +89,7 @@ export default function NavBar() {
                 <div className={`w-10 h-1 bg-white rounded-sm transition-transform duration-300 ${ismenu ? "-rotate-45 -translate-y-2" : ""}`}></div>
               </div>
               {ismenu && (
-                <div className="w-screen  h-[270vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
+                <div className="w-screen  h-[285vh] bg-white rounded-md shadow-md z-50 absolute  right-1 mt-2">
                   <ul className="w-full h-full p-4 flex flex-col gap-4">
                    <Link to={"https://shorturl.at/OHjQJ"} className=" flex w-full gap-2 items-center">
                    <img className="w-10 h-10" alt="" src="/img/grid/img-oskar-logo.svg"></img>
@@ -122,113 +166,256 @@ export default function NavBar() {
                   
                     <div className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue "></div>
                    <div className="underline border-navblue border-2 border"></div>
-                   <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                   <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            shares
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleNavbar} src={isNavbar ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isNavbar && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">stock overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">indices</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">real time prices</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">dates</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">Investments trends</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">dividends</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">broker comparison</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.finanzen.net/ratgeber/boerse/">stock guide</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.finanzen.net/ratgeber/c24-bank-test-und-erfahrungen/">selection</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            news
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleNews} src={isNews ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isNews && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">news overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">nes search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">indexes news</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">analyses</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">categories</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">top ranking</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
-                           indices
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
+                           Indices
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleIndices} src={isIndices ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isIndices && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">index overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">important indices</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">index lists</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">top/flop lists</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">real time prices</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            funds
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleFunds} src={isFunds ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isFunds && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">fund overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">fund search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">fund regions</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">fund news</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">sustainable Investments</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">specials</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
-                           etf
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
+                           etfs
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleEtfs} src={isEtfs ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isEtfs && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">etf overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">etf search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">etf savings plan</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">etf guide</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">robo Advisor comparison</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">investing in children</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">special</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            Certificates
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={togglecertificates} src={isCertificates ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isCertificates && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">Certificates overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">Certificates search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">tools</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">underlying search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">to know</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">new issues</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">specials</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
-                           leverage products 
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
+                           leverage Products
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleLeverage} src={isLeverage ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isLeverage && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">leverage overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">leverage Products search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">tools</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">underlying search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">to know</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">new issues</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">specials</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.finanzen.net/ratgeber/boerse/">cfds</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            bonds
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleBonds} src={isBonds ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isBonds && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">bond overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">bond search</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">to know</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">interest charges</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">bond guide</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">dividends</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">broker comparison</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            raw malterials
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleMalterials} src={isMalterials ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isMalterials && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">raw maltrials overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">important raw malterials</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">buy gold</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">buy silver</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">forward curve</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">etcs</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">specials</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.finanzen.net/ratgeber/boerse/">cfds</a></li>
+
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
-                           crypto
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
+                           Crypto
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleCurrency} src={isCurrency ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isCurrency && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">Crypto overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">important cryptocurrencies</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">buy cryptocurrencies</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">cfds</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
                            Currency
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleCrypto} src={iscrypto ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        iscrypto && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">foreign exchange overview</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">important currency pairs</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">currency converter</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">cryptocurrencies</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">Crypto broker comparison</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">crypto broker comparison</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">cfds</a></li>
+                      </div>
+                      }
+                   </div>
                     <div className=" border-gray-400 border w-full "></div>
-                    <Link to={""} className="">
-                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  " link onClick={toggleNavbar}>
-                           Counselor
-                      </li>
-                    {
-                          isNavbar && <NavFaq></NavFaq>
-                        }
-                   </Link>
+                    <div  className=" ">
+                      <div className="flex justify-between items-center w-full">
+                      <Link to={''} className="w-full h-full">
+                       <li className="text-lg capitalize hover:text-blue-400 hover:underline font-semibold text-navblue  ">
+                           counselor
+                       </li></Link>
+                         <div><img className="w-8 h-8" onClick={toggleCounselor} src={isCounselor ? "/img/icons/arrow-up.png" : "/img/icons/down-arrow.png"}  alt="+"></img></div>
+                      </div>
+                      {
+                        isCounselor && <div className="   p-4 flex gap-4 flex-col ">
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/GOOG">our recommnedation</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/COIN'">investment</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://shorturl.at/2SPIJ">etfs, funds and certificates</a></li>
+                        <li className="text-base capitalize font-medium text-navblue" ><a href="https://brokerchooser.com/compare">cryptocurrencies</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.marketwatch.com/investing/stock/nvda'">accouts & credit</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.cnbc.com/quotes/NFLX">broker & depots</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://brokerchooser.com/compare">insurance & pensions</a></li>
+                        <li className="text-base capitalize font-medium text-navblue"><a href="https://www.finanzen.net/ratgeber/boerse/">youtube</a></li>
+                      </div>
+                      }
+                   </div>
                    
                   </ul>
                 </div>

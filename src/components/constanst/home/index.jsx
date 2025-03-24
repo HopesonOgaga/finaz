@@ -28,7 +28,7 @@ export default function Home() {
         <NavBar></NavBar>
         <TradingViewTickerTape></TradingViewTickerTape>
       </div>
-       <section className="w-full h-full"><NewsComponent></NewsComponent></section>
+       {/* <section className="w-full h-full"><NewsComponent></NewsComponent></section> */}
       <section className="flex md:justify-center flex-col md:flex-row flex-wrap   gap-10   max-w-full h-full py-4 ">
         <div className="flex gap-4 flex-col">
         <NewsTradingViewWidget></NewsTradingViewWidget>
@@ -45,7 +45,7 @@ export default function Home() {
       <section>
       
         <section className="w-full  flex flex-col gap-6 ">
-          <NewsComponent></NewsComponent>
+          {/* <NewsComponent></NewsComponent> */}
           <BusinessNews></BusinessNews>
         </section>
       </section>
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
       <section className="w-full h-full flex flex-col gap-6 ">
         {" "}
-        <ElonComponent></ElonComponent>
+        {/* <ElonComponent></ElonComponent> */}
         <TeslaNews></TeslaNews>
       </section>
       <div className="mt-6 mb-6">
